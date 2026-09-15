@@ -5,6 +5,40 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    const themeToggle = document.querySelector(".theme-toggle");
+
+    if (themeToggle) {
+
+        const savedTheme = localStorage.getItem("alef-theme");
+
+        if (savedTheme === "dark") {
+            document.body.classList.add("dark-mode");
+        }
+
+        function updateThemeToggle() {
+            const isDark = document.body.classList.contains("dark-mode");
+
+            themeToggle.setAttribute("aria-pressed", String(isDark));
+            themeToggle.setAttribute(
+                "aria-label",
+                isDark ? "Ativar modo claro" : "Ativar modo noturno"
+            );
+            themeToggle.querySelector("span:last-child").textContent =
+                isDark ? "Modo claro" : "Modo noturno";
+            themeToggle.querySelector("span:first-child").textContent =
+                isDark ? "☀" : "☾";
+        }
+
+        themeToggle.addEventListener("click", () => {
+            const isDark = document.body.classList.toggle("dark-mode");
+
+            localStorage.setItem("alef-theme", isDark ? "dark" : "light");
+            updateThemeToggle();
+        });
+
+        updateThemeToggle();
+    }
+
     /* =====================================================
        LINKS INTERNOS — SCROLL SUAVE
     ===================================================== */
