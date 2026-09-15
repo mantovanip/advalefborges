@@ -1039,6 +1039,23 @@
             margin-left: auto;
         }
 
+        .article-page .menu-toggle {
+            display: none;
+            width: 38px;
+            height: 38px;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .article-page .menu-toggle span {
+            display: block;
+            width: 22px;
+            height: 1px;
+            margin: 6px auto;
+            background: currentColor;
+        }
+
         .article-page .site-header .main-nav a:hover,
         .article-page .header .nav a:hover {
             color: var(--gold-light);
@@ -1086,7 +1103,7 @@
 
         @media (max-width: 900px) {
 
-            .article-page .site-header,
+            body.article-page .site-header,
             .article-page .header,
             .article-page .header-inner,
             .article-page .hi {
@@ -1102,15 +1119,34 @@
             }
 
             .article-page .main-nav {
-                gap: 10px;
-                flex: 1;
-                flex-wrap: wrap;
-                justify-content: flex-end;
+                position: absolute;
+                top: 78px;
+                right: 3%;
+                left: 3%;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding: 12px 20px;
+                background: #000;
+                border: 1px solid rgba(255, 255, 255, .14);
+                box-shadow: 0 18px 30px rgba(0, 0, 0, .2);
+            }
+
+            .article-page .main-nav.is-open {
+                display: flex;
             }
 
             .article-page .main-nav a {
                 font-size: 10px;
                 white-space: nowrap;
+                padding: 13px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, .14);
+            }
+
+            .article-page .menu-toggle {
+                display: block;
+                order: 3;
             }
         }
     </style>
@@ -1125,6 +1161,10 @@
             <a href="../index.html" class="logo" aria-label="Alef Borges Advocacia">
                 <img src="../img/logo.png" alt="Alef Borges Advocacia">
             </a>
+
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-navigation">
+                <span></span><span></span>
+            </button>
 
             <nav class="main-nav" aria-label="Navegação principal">
                 <a href="../index.html#inicio">Início</a>
@@ -1730,6 +1770,32 @@
 
     </script>
 
+<script>
+    (() => {
+        const toggle = document.querySelector(".menu-toggle");
+        const menu = document.querySelector(".main-nav");
+        if (!toggle || !menu) return;
+        const closeMenu = () => {
+            menu.classList.remove("is-open");
+            toggle.setAttribute("aria-expanded", "false");
+            toggle.setAttribute("aria-label", "Abrir menu");
+            document.body.classList.remove("menu-open");
+        };
+        toggle.addEventListener("click", (event) => {
+            event.stopPropagation();
+            const isOpen = menu.classList.toggle("is-open");
+            toggle.setAttribute("aria-expanded", String(isOpen));
+            toggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+            document.body.classList.toggle("menu-open", isOpen);
+        });
+        menu.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+        document.addEventListener("click", (event) => {
+            if (menu.classList.contains("is-open") && !menu.contains(event.target) && !toggle.contains(event.target)) closeMenu();
+        });
+        document.addEventListener("keydown", (event) => { if (event.key === "Escape") closeMenu(); });
+        window.addEventListener("resize", () => { if (window.innerWidth > 900) closeMenu(); });
+    })();
+</script>
 </body>
 
 </html>
