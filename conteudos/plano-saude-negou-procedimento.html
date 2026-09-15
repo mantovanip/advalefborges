@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0b192c">
+    <meta name="theme-color" content="#081522">
 
     <title>Plano de saúde negou um procedimento. O que fazer? | Advocacia Alef Borges</title>
 
@@ -18,7 +18,7 @@
     <meta property="og:title" content="Plano de saúde negou um procedimento. O que fazer?">
     <meta property="og:description"
         content="Entenda como registrar a negativa, reunir documentos e avaliar os próximos passos diante de uma negativa do plano de saúde.">
-    <meta property="og:image" content="../img/logo.png">
+    <meta property="og:image" content="../img/alef-01.png">
 
     <link rel="icon" type="image/png" href="../img/logo.png">
 
@@ -26,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <style>
@@ -105,7 +105,7 @@
             gap: 35px;
         }
 
-        .brand {
+        .logo {
             width: 155px;
             height: 58px;
 
@@ -114,7 +114,7 @@
             flex-shrink: 0;
         }
 
-        .brand img {
+        .logo img {
             display: block;
             max-width: 100%;
             max-height: 55px;
@@ -189,7 +189,7 @@
             color: var(--gold);
         }
 
-        .whatsapp-top {
+        .header-cta {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -207,7 +207,7 @@
             transition: .2s ease;
         }
 
-        .whatsapp-top:hover {
+        .header-cta:hover {
             background: #142b47;
         }
 
@@ -837,7 +837,7 @@
            FOOTER
         ========================= */
 
-        .site-footer {
+        .footer {
             background: #081322;
             color: #fff;
 
@@ -1030,11 +1030,11 @@
                 height: 74px;
             }
 
-            .brand {
+            .logo {
                 width: 130px;
             }
 
-            .whatsapp-top {
+            .header-cta {
                 padding: 0 12px;
                 font-size: 10px;
             }
@@ -1100,7 +1100,7 @@
                 width: calc(100% - 32px);
             }
 
-            .brand {
+            .logo {
                 width: 112px;
             }
 
@@ -1109,7 +1109,7 @@
                 height: 34px;
             }
 
-            .whatsapp-top {
+            .header-cta {
                 min-height: 34px;
             }
 
@@ -1133,10 +1133,171 @@
                 font-size: 19px;
             }
         }
+
+        /* Shared visual contract: self-contained article */
+        :root {
+            --navy: #081522;
+            --navy-2: #0d1d2e;
+            --navy-3: #13263a;
+            --gold: #b99652;
+            --gold-light: #d1b875;
+            --cream: #f5f2eb;
+            --white: #ffffff;
+            --text: #18212b;
+            --muted: #68717c;
+            --line: rgba(8, 21, 34, .16);
+            --line-light: rgba(255, 255, 255, .18);
+            --serif: "Cormorant Garamond", Georgia, serif;
+            --display: "Bodoni Moda", "Cormorant Garamond", Georgia, serif;
+            --sans: "DM Sans", Arial, sans-serif;
+        }
+
+        body.article-page {
+            overflow-x: hidden;
+            background: var(--cream);
+            color: var(--text);
+            font-family: var(--sans);
+        }
+
+        body.article-page.dark {
+            --cream: #07111d;
+            --white: #0d1b2a;
+            --text: #f4f1ea;
+            --muted: #aab3bc;
+            --line: rgba(255, 255, 255, .14);
+            background: #07111d;
+            color: #f4f1ea;
+        }
+
+        body.article-page .site-header,
+        .article-page .header {
+            height: 86px;
+            min-height: 86px;
+            background: #000;
+            color: #fff;
+            border-bottom-color: rgba(255, 255, 255, .12);
+        }
+
+        .article-page .header-inner,
+        .article-page .hi {
+            width: min(94%, 1240px);
+            height: 86px;
+            min-height: 86px;
+            margin-inline: auto;
+            padding: 0;
+        }
+
+        .article-page .logo,
+        .article-page .hi .logo {
+            width: 74px;
+            height: 74px;
+            flex: 0 0 74px;
+            overflow: hidden;
+            border: 2px solid var(--gold-light);
+            border-radius: 50%;
+            background: #000;
+            box-shadow: 0 0 0 2px rgba(209, 184, 117, .28);
+        }
+
+        .article-page .logo img,
+        .article-page .hi .logo img {
+            width: 100%;
+            height: 100%;
+            max-width: none;
+            max-height: none;
+            object-fit: contain;
+        }
+
+        .article-page .site-header .main-nav a,
+        .article-page .header .nav a {
+            color: rgba(255, 255, 255, .72);
+        }
+
+        .article-page .main-nav {
+            display: flex;
+            align-items: center;
+            gap: clamp(18px, 2.5vw, 38px);
+            margin-left: auto;
+        }
+
+        .article-page .site-header .main-nav a:hover,
+        .article-page .header .nav a:hover {
+            color: var(--gold-light);
+        }
+
+        .article-page .header-actions,
+        .article-page .actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .article-page .theme,
+        .article-page .theme-toggle {
+            width: 34px;
+            height: 34px;
+            border: 0;
+            background: transparent;
+            color: var(--gold-light);
+        }
+
+        .article-page .header-cta,
+        .article-page .wa {
+            min-height: 44px;
+            padding: 0 18px;
+            border: 1px solid var(--gold);
+            background: transparent;
+            color: var(--gold-light);
+        }
+
+        .article-page>footer {
+            background: #000;
+            color: #fff;
+        }
+
+        .article-page>footer img {
+            width: 82px;
+            height: 82px;
+            padding: 4px;
+            border: 2px solid var(--gold-light);
+            border-radius: 50%;
+            background: #000;
+            object-fit: contain;
+        }
+
+        @media (max-width: 900px) {
+
+            .article-page .site-header,
+            .article-page .header,
+            .article-page .header-inner,
+            .article-page .hi {
+                height: 78px;
+                min-height: 78px;
+            }
+
+            .article-page .logo,
+            .article-page .hi .logo {
+                width: 64px;
+                height: 64px;
+                flex-basis: 64px;
+            }
+
+            .article-page .main-nav {
+                gap: 10px;
+                flex: 1;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+
+            .article-page .main-nav a {
+                font-size: 10px;
+                white-space: nowrap;
+            }
+        }
     </style>
 </head>
 
-<body data-theme="light">
+<body class="article-page" data-theme="light">
 
     <!-- HEADER -->
 
@@ -1144,15 +1305,16 @@
 
         <div class="header-inner">
 
-            <a class="brand" href="../index.html" aria-label="Advocacia Alef Borges">
+            <a class="logo" href="../index.html" aria-label="Advocacia Alef Borges">
                 <img src="../img/logo.png" alt="Advocacia Alef Borges">
             </a>
 
             <nav class="main-nav" aria-label="Navegação principal">
-                <a href="../index.html">Início</a>
-                <a href="../index.html#atuacao">Áreas de atuação</a>
-                <a href="../index.html#sobre">O escritório</a>
+                <a href="../index.html#inicio">Início</a>
+                <a href="../index.html#atuacao">Atuação</a>
+                <a href="../index.html#sobre">O Advogado</a>
                 <a href="../index.html#conteudos">Conteúdos</a>
+                <a href="../index.html#contato">Contato</a>
             </nav>
 
             <div class="header-actions">
@@ -1161,7 +1323,7 @@
                     ☾
                 </button>
 
-                <a class="whatsapp-top"
+                <a class="header-cta"
                     href="https://wa.me/558598199293?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20an%C3%A1lise%20sobre%20uma%20negativa%20do%20plano%20de%20sa%C3%BAde."
                     target="_blank" rel="noopener">
                     WhatsApp
@@ -1788,7 +1950,7 @@
 
     <!-- FOOTER -->
 
-    <footer class="site-footer">
+    <footer class="footer">
 
         <div class="footer-inner">
 

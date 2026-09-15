@@ -21,6 +21,7 @@
     <meta property="og:title" content="Golpe ou fraude bancária: o que fazer?">
     <meta property="og:description"
         content="Entenda os primeiros passos diante de uma fraude bancária e quais informações podem ser importantes para analisar o caso.">
+    <meta property="og:image" content="../img/alef-01.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -951,8 +952,168 @@
             }
 
         }
+
+        /* Shared visual contract: self-contained article */
+        :root {
+            --navy: #081522;
+            --navy-2: #0d1d2e;
+            --navy-3: #13263a;
+            --gold: #b99652;
+            --gold-light: #d1b875;
+            --cream: #f5f2eb;
+            --white: #ffffff;
+            --text: #18212b;
+            --muted: #68717c;
+            --line: rgba(8, 21, 34, .16);
+            --line-light: rgba(255, 255, 255, .18);
+            --serif: "Cormorant Garamond", Georgia, serif;
+            --display: "Bodoni Moda", "Cormorant Garamond", Georgia, serif;
+            --sans: "DM Sans", Arial, sans-serif;
+        }
+
+        body.article-page {
+            overflow-x: hidden;
+            background: var(--cream);
+            color: var(--text);
+            font-family: var(--sans);
+        }
+
+        body.article-page.dark {
+            --cream: #07111d;
+            --white: #0d1b2a;
+            --text: #f4f1ea;
+            --muted: #aab3bc;
+            --line: rgba(255, 255, 255, .14);
+            background: #07111d;
+            color: #f4f1ea;
+        }
+
+        body.article-page .site-header,
+        .article-page .header {
+            height: 86px;
+            min-height: 86px;
+            background: #000;
+            color: #fff;
+            border-bottom-color: rgba(255, 255, 255, .12);
+        }
+
+        .article-page .header-inner,
+        .article-page .hi {
+            width: min(94%, 1240px);
+            height: 86px;
+            min-height: 86px;
+            margin-inline: auto;
+            padding: 0;
+        }
+
+        .article-page .logo,
+        .article-page .hi .logo {
+            width: 74px;
+            height: 74px;
+            flex: 0 0 74px;
+            overflow: hidden;
+            border: 2px solid var(--gold-light);
+            border-radius: 50%;
+            background: #000;
+            box-shadow: 0 0 0 2px rgba(209, 184, 117, .28);
+        }
+
+        .article-page .logo img,
+        .article-page .hi .logo img {
+            width: 100%;
+            height: 100%;
+            max-width: none;
+            max-height: none;
+            object-fit: contain;
+        }
+
+        .article-page .site-header .main-nav a,
+        .article-page .header .nav a {
+            color: rgba(255, 255, 255, .72);
+        }
+
+        .article-page .main-nav {
+            display: flex;
+            align-items: center;
+            gap: clamp(18px, 2.5vw, 38px);
+            margin-left: auto;
+        }
+
+        .article-page .site-header .main-nav a:hover,
+        .article-page .header .nav a:hover {
+            color: var(--gold-light);
+        }
+
+        .article-page .header-actions,
+        .article-page .actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .article-page .theme,
+        .article-page .theme-toggle {
+            width: 34px;
+            height: 34px;
+            border: 0;
+            background: transparent;
+            color: var(--gold-light);
+        }
+
+        .article-page .header-cta,
+        .article-page .wa {
+            min-height: 44px;
+            padding: 0 18px;
+            border: 1px solid var(--gold);
+            background: transparent;
+            color: var(--gold-light);
+        }
+
+        .article-page>footer {
+            background: #000;
+            color: #fff;
+        }
+
+        .article-page>footer img {
+            width: 82px;
+            height: 82px;
+            padding: 4px;
+            border: 2px solid var(--gold-light);
+            border-radius: 50%;
+            background: #000;
+            object-fit: contain;
+        }
+
+        @media (max-width: 900px) {
+
+            .article-page .site-header,
+            .article-page .header,
+            .article-page .header-inner,
+            .article-page .hi {
+                height: 78px;
+                min-height: 78px;
+            }
+
+            .article-page .logo,
+            .article-page .hi .logo {
+                width: 64px;
+                height: 64px;
+                flex-basis: 64px;
+            }
+
+            .article-page .main-nav {
+                gap: 10px;
+                flex: 1;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+
+            .article-page .main-nav a {
+                font-size: 10px;
+                white-space: nowrap;
+            }
+        }
     </style>
-    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body class="article-page" data-theme="light">
@@ -966,39 +1127,11 @@
             </a>
 
             <nav class="main-nav" aria-label="Navegação principal">
-                <ul>
-
-                    <li>
-                        <a href="../index.html#inicio">
-                            Início
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="../index.html#atuacao">
-                            Áreas de atuação
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="../index.html#sobre">
-                            O advogado
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="../index.html#conteudos">
-                            Conteúdos
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="../index.html#contato">
-                            Contato
-                        </a>
-                    </li>
-
-                </ul>
+                <a href="../index.html#inicio">Início</a>
+                <a href="../index.html#atuacao">Atuação</a>
+                <a href="../index.html#sobre">O Advogado</a>
+                <a href="../index.html#conteudos">Conteúdos</a>
+                <a href="../index.html#contato">Contato</a>
             </nav>
 
             <div class="header-actions">
