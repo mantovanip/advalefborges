@@ -138,6 +138,7 @@ a {
     border-radius: 6px;
     background: #183b63;
     color: var(--white);
+    cursor: pointer;
     font-family: var(--sans);
     font-size: 11px;
     font-weight: 600;
@@ -175,7 +176,6 @@ a {
 .logo {
     position: relative;
     z-index: 2;
-    padding-left: 2px;
 
     display: flex;
     align-items: center;
