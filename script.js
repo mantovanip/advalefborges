@@ -1,181 +1,94 @@
-/* =========================================================
-   ADVOCACIA ALEF BORGES
-   JavaScript
-========================================================= */
-
 document.addEventListener("DOMContentLoaded", () => {
-
+    const body = document.body;
+    const header = document.querySelector(".site-header");
     const themeToggle = document.querySelector(".theme-toggle");
+    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector(".main-nav");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    if (themeToggle) {
+    const storedTheme = localStorage.getItem("alef-theme");
+    const initialTheme = storedTheme === "dark" ? "dark" : "light";
 
-        const savedTheme = localStorage.getItem("alef-theme");
+    function setTheme(theme) {
+        const isDark = theme === "dark";
 
-        if (savedTheme === "dark") {
-            document.body.classList.add("dark-mode");
-        }
-
-        function updateThemeToggle() {
-            const isDark = document.body.classList.contains("dark-mode");
-
-            themeToggle.setAttribute("aria-pressed", String(isDark));
-            themeToggle.setAttribute(
-                "aria-label",
-                isDark ? "Ativar modo claro" : "Ativar modo noturno"
-            );
-            themeToggle.querySelector("span:last-child").textContent =
-                isDark ? "Modo claro" : "Modo noturno";
-            themeToggle.querySelector("span:first-child").textContent =
-                isDark ? "☀" : "☾";
-        }
-
-        themeToggle.addEventListener("click", () => {
-            const isDark = document.body.classList.toggle("dark-mode");
-
-            localStorage.setItem("alef-theme", isDark ? "dark" : "light");
-            updateThemeToggle();
-        });
-
-        updateThemeToggle();
+        body.dataset.theme = isDark ? "dark" : "light";
+        themeToggle?.setAttribute("aria-pressed", String(isDark));
+        themeColorMeta?.setAttribute("content", isDark ? "#07111D" : "#081522");
+        localStorage.setItem("alef-theme", isDark ? "dark" : "light");
     }
 
-    /* =====================================================
-       LINKS INTERNOS — SCROLL SUAVE
-    ===================================================== */
+    setTheme(initialTheme);
+
+    themeToggle?.addEventListener("click", () => {
+        const nextTheme = body.dataset.theme === "dark" ? "light" : "dark";
+        setTheme(nextTheme);
+    });
+
+    function closeMenu() {
+        navigation?.classList.remove("is-open");
+        menuToggle?.setAttribute("aria-expanded", "false");
+        menuToggle?.setAttribute("aria-label", "Abrir menu");
+        body.classList.remove("menu-open");
+    }
+
+    menuToggle?.addEventListener("click", () => {
+        const isOpen = navigation.classList.toggle("is-open");
+
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+        body.classList.toggle("menu-open", isOpen);
+    });
+
+    navigation?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!navigation?.classList.contains("is-open")) return;
+        if (navigation.contains(event.target) || menuToggle?.contains(event.target)) return;
+        closeMenu();
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeMenu();
+    });
 
     document.querySelectorAll('a[href^="#"]').forEach((link) => {
-
-        link.addEventListener("click", function (event) {
-
-            const targetId = this.getAttribute("href");
-
-            if (!targetId || targetId === "#") {
-                event.preventDefault();
-                return;
-            }
-
-            const target = document.querySelector(targetId);
+        link.addEventListener("click", (event) => {
+            const targetId = link.getAttribute("href");
+            const target = targetId ? document.querySelector(targetId) : null;
 
             if (!target) return;
 
             event.preventDefault();
-
-            const header = document.querySelector(".site-header");
-            const headerHeight = header ? header.offsetHeight : 0;
-
-            const targetPosition =
-                target.getBoundingClientRect().top +
-                window.scrollY -
-                headerHeight;
+            const offset = (header?.offsetHeight || 0) + 10;
+            const top = target.getBoundingClientRect().top + window.scrollY - offset;
 
             window.scrollTo({
-                top: targetPosition,
-                behavior: "smooth"
+                top,
+                behavior: reduceMotion ? "auto" : "smooth"
             });
-
         });
-
     });
 
+    const year = document.querySelector("[data-year]");
+    if (year) year.textContent = new Date().getFullYear();
 
-    /* =====================================================
-       HEADER — SOMBRA AO ROLAR
-    ===================================================== */
+    const revealElements = document.querySelectorAll(".reveal");
 
-    const header = document.querySelector(".site-header");
-
-    function updateHeader() {
-
-        if (!header) return;
-
-        if (window.scrollY > 20) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
-
-    }
-
-    window.addEventListener("scroll", updateHeader, {
-        passive: true
-    });
-
-    updateHeader();
-
-
-    /* =====================================================
-       ANIMAÇÃO DE ENTRADA DAS SEÇÕES
-    ===================================================== */
-
-    const animatedElements = document.querySelectorAll(
-        ".hero-content, .hero-visual, .intro-text, " +
-        ".analysis-card, .practice-card, .about-image, " +
-        ".about-content, .article-card, .final-cta-inner"
-    );
-
-    if ("IntersectionObserver" in window) {
-
-        const observer = new IntersectionObserver(
-            (entries, observerInstance) => {
-
-                entries.forEach((entry) => {
-
-                    if (!entry.isIntersecting) return;
-
-                    entry.target.classList.add("is-visible");
-
-                    observerInstance.unobserve(entry.target);
-
-                });
-
-            },
-            {
-                threshold: 0.12,
-                rootMargin: "0px 0px -40px 0px"
-            }
-        );
-
-        animatedElements.forEach((element) => {
-            element.classList.add("animate-on-scroll");
-            observer.observe(element);
-        });
-
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealElements.forEach((element) => element.classList.add("is-visible"));
     } else {
+        const observer = new IntersectionObserver((entries, observerInstance) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("is-visible");
+                observerInstance.unobserve(entry.target);
+            });
+        }, { threshold: 0.14, rootMargin: "0px 0px -40px 0px" });
 
-        animatedElements.forEach((element) => {
-            element.classList.add("is-visible");
-        });
-
+        revealElements.forEach((element) => observer.observe(element));
     }
-
-
-    /* =====================================================
-       ANO AUTOMÁTICO NO FOOTER
-    ===================================================== */
-
-    const footerYear = document.querySelector(".footer-bottom span");
-
-    if (footerYear) {
-
-        footerYear.textContent =
-            footerYear.textContent.replace(
-                /\b20\d{2}\b/,
-                new Date().getFullYear()
-            );
-
-    }
-
-
-    /* =====================================================
-       PROTEÇÃO CONTRA CLIQUE EM LINKS "#"
-    ===================================================== */
-
-    document.querySelectorAll('a[href="#"]').forEach((link) => {
-
-        link.addEventListener("click", (event) => {
-            event.preventDefault();
-        });
-
-    });
-
 });
