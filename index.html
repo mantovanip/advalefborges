@@ -3,335 +3,817 @@
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0C1117">
+
     <meta name="description"
-        content="Advocacia Alef Borges. Atuação jurídica técnica e personalizada em Direito Bancário, Direito da Saúde, Direito do Consumidor, Previdenciário, Trabalhista, Imobiliário e Família e Sucessões.">
-    <meta name="theme-color" content="#081522">
-    <meta property="og:title" content="Advocacia Alef Borges | Fortaleza - CE">
-    <meta property="og:description" content="Atuação jurídica técnica e personalizada para decisões que importam.">
+        content="Advocacia Alef Borges. Atuação jurídica técnica e personalizada em Direito Bancário, Direito da Saúde, Direito do Consumidor, Previdenciário, Trabalhista, Imobiliário e Família e Sucessões em Fortaleza e online.">
+
+    <meta name="author" content="Advocacia Alef Borges">
+
     <meta property="og:type" content="website">
+
+    <meta property="og:title" content="Advocacia Alef Borges | Fortaleza - CE">
+
+    <meta property="og:description" content="Atuação jurídica técnica e personalizada para decisões que importam.">
+
     <meta property="og:image" content="img/alef-01.png">
-    <title>Advocacia Alef Borges | Fortaleza - CE</title>
-    <link rel="icon" type="image/png" href="img/logo.png">
+
+    <link rel="icon" href="img/logo.png" type="image/png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
-        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
+
+    <title>Advocacia Alef Borges | Fortaleza - CE</title>
 </head>
 
-<body data-theme="light">
-    <header class="site-header">
+<body data-theme="dark">
+
+    <!-- =========================================================
+       HEADER
+  ========================================================== -->
+
+    <header class="site-header" id="header">
+
         <div class="container header-inner">
-            <a class="logo" href="#inicio" aria-label="Alef Borges Advocacia">
-                <img src="img/logo.png" alt="Alef Borges Advocacia">
+
+            <a class="logo" href="#inicio" aria-label="Advocacia Alef Borges — início">
+                <img src="img/logo.png" alt="Advocacia Alef Borges">
             </a>
 
             <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
-                aria-controls="main-navigation">
-                <span></span><span></span>
+                aria-controls="main-navigation" data-menu-toggle>
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
 
             <nav class="main-nav" id="main-navigation" aria-label="Navegação principal">
                 <a href="#inicio">Início</a>
                 <a href="#atuacao">Atuação</a>
                 <a href="#sobre">O Advogado</a>
+                <a href="#processo">Como Funciona</a>
                 <a href="#conteudos">Conteúdos</a>
                 <a href="#contato">Contato</a>
             </nav>
 
-            <div class="header-tools">
+            <div class="header-actions">
 
-                <button class="theme-toggle" type="button" aria-label="Alternar tema" aria-pressed="false">
-                    <svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24">
-                        <path d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z"></path>
-                    </svg>
-                    <svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="4"></circle>
-                        <path
-                            d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4">
-                        </path>
-                    </svg>
+                <button class="theme-toggle" type="button" aria-label="Ativar modo claro" aria-pressed="false"
+                    data-theme-toggle>
+                    <span class="theme-icon" aria-hidden="true">☀</span>
                 </button>
-                <a class="header-cta" href="https://wa.me/558598199293" target="_blank" rel="noopener noreferrer">Fale
-                    conosco <span class="arrow-icon" aria-hidden="true">↗</span></a>
+
+                <a class="button button-header" href="https://wa.me/558598199293" target="_blank"
+                    rel="noopener noreferrer">
+                    WhatsApp
+                </a>
+
             </div>
+
         </div>
+
     </header>
 
-    <main id="inicio">
-        <section class="hero section-dark" aria-labelledby="hero-title">
+
+    <main>
+
+        <!-- =========================================================
+         HERO
+    ========================================================== -->
+
+        <section class="hero section-dark" id="inicio">
+
+            <div class="hero-line hero-line-top"></div>
+
             <div class="container hero-grid">
+
                 <div class="hero-content reveal">
-                    <p class="eyebrow">Advocacia Alef Borges</p>
-                    <h1 id="hero-title">Estratégia jurídica<br><em>para decisões</em><br>que importam.</h1>
-                    <p class="hero-description">Atuação jurídica técnica e personalizada, com foco em Direito Bancário,
-                        Direito da Saúde e Direito do Consumidor.</p>
+
+                    <p class="eyebrow">
+                        Advocacia Alef Borges · Fortaleza — CE
+                    </p>
+
+                    <h1>
+                        Estratégia jurídica para
+                        <span>decisões que importam.</span>
+                    </h1>
+
+                    <p class="hero-lead">
+                        Atuação jurídica técnica e personalizada para compreender
+                        o seu caso, organizar os fatos e avaliar os caminhos
+                        juridicamente possíveis.
+                    </p>
+
                     <div class="hero-actions">
-                        <a class="button button-gold" href="https://wa.me/558598199293" target="_blank"
-                            rel="noopener noreferrer">Solicitar análise do meu caso <span class="arrow-icon"
-                                aria-hidden="true">↗</span></a>
-                        <a class="text-link light-link" href="#atuacao">Conheça nossa atuação <span class="arrow-icon"
-                                aria-hidden="true">→</span></a>
+
+                        <a class="button button-gold"
+                            href="https://wa.me/558598199293?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20an%C3%A1lise%20t%C3%A9cnica%20sobre%20o%20meu%20caso."
+                            target="_blank" rel="noopener noreferrer">
+                            Falar sobre meu caso
+                        </a>
+
+                        <a class="text-link text-link-light" href="#atuacao">
+                            Conhecer a atuação
+                            <span aria-hidden="true">→</span>
+                        </a>
+
                     </div>
-                    <div class="hero-meta"><span class="gold-line"></span><span>Atendimento presencial e online em
-                            Fortaleza e região.</span></div>
+
+                    <div class="hero-meta">
+                        <span>Atendimento presencial e online</span>
+                        <span aria-hidden="true">·</span>
+                        <span>Fortaleza e região</span>
+                    </div>
+
                 </div>
 
-                <div class="hero-visual reveal reveal-delay">
-                    <span class="hero-mark" aria-hidden="true">AB</span>
-                    <figure class="hero-image-wrap">
-                        <img src="img/alef-01.png" alt="Advogado Alef Borges em retrato editorial" loading="eager">
-                        <figcaption><span class="figure-number">01</span><span>Conhecimento jurídico,<br>estratégia e
-                                compromisso.</span></figcaption>
-                    </figure>
-                    <span class="hero-rule" aria-hidden="true"></span>
+                <div class="hero-media reveal">
+                    <div class="hero-image-frame">
+                        <img src="img/alef-01.png" alt="Advocacia Alef Borges" loading="eager">
+                    </div>
                 </div>
+
             </div>
+
+            <div class="hero-line hero-line-bottom"></div>
+
         </section>
 
-        <section class="positioning section-light" aria-labelledby="positioning-title">
-            <div class="container positioning-grid">
-                <div class="section-index"><span>01</span><span class="vertical-rule"></span><span>Posicionamento</span>
+
+        <!-- =========================================================
+         POSICIONAMENTO
+    ========================================================== -->
+
+        <section class="section section-light positioning" id="posicionamento">
+
+            <div class="section-line" aria-hidden="true"></div>
+
+            <div class="container two-column reveal">
+
+                <div>
+
+                    <p class="eyebrow">
+                        Atuação estratégica
+                    </p>
+
+                    <h2>
+                        Direito exige análise.
+                        Seu caso merece atenção aos detalhes.
+                    </h2>
+
                 </div>
-                <div class="positioning-copy reveal">
-                    <p class="eyebrow">Uma advocacia estratégica</p>
-                    <h2 id="positioning-title">Cada caso exige<br><em>uma estratégia própria.</em></h2>
-                    <p>Cada situação possui particularidades. Por isso, o trabalho começa pela compreensão detalhada dos
-                        fatos, documentos e circunstâncias de cada caso.</p>
+
+                <div class="section-copy">
+
+                    <p>
+                        Cada situação jurídica possui fatos, documentos, prazos
+                        e circunstâncias próprias. Por isso, a atuação começa
+                        pela compreensão objetiva do problema antes da definição
+                        dos próximos passos.
+                    </p>
+
+                    <p>
+                        O trabalho é direcionado especialmente a questões de
+                        Direito Bancário, Direito da Saúde e Direito do Consumidor,
+                        sem deixar de atender outras demandas jurídicas dentro
+                        das áreas de atuação do escritório.
+                    </p>
+
                 </div>
-                <div class="positioning-mark" aria-hidden="true">AB</div>
+
             </div>
+
         </section>
 
-        <section class="process section-navy" aria-labelledby="process-title">
+
+        <!-- =========================================================
+         COMO FUNCIONA
+    ========================================================== -->
+
+        <section class="section section-paper" id="processo">
+
+            <div class="section-line" aria-hidden="true"></div>
+
             <div class="container">
-                <div class="section-intro split-intro">
-                    <div>
-                        <p class="eyebrow eyebrow-light">Análise técnica</p>
-                        <h2 id="process-title">Clareza antes<br><em>da decisão.</em></h2>
-                    </div>
-                    <p>Uma análise inicial permite compreender melhor a situação e identificar os caminhos jurídicos
-                        possíveis para o caso.</p>
+
+                <div class="section-heading reveal">
+
+                    <p class="eyebrow">
+                        Como funciona
+                    </p>
+
+                    <h2>
+                        Clareza antes de qualquer decisão.
+                    </h2>
+
+                    <p>
+                        Um processo de atendimento organizado ajuda a transformar
+                        um problema jurídico em um cenário compreensível.
+                    </p>
+
                 </div>
-                <div class="process-list">
-                    <article class="process-item reveal"><span class="process-number">01</span>
-                        <div>
-                            <h3>Compreender</h3>
-                            <p>Você apresenta sua situação e os documentos relacionados ao caso.</p>
-                        </div><span class="line-arrow" aria-hidden="true">↗</span>
+
+                <div class="process-grid">
+
+                    <article class="process-card reveal">
+                        <span>01</span>
+
+                        <h3>
+                            Você apresenta o caso
+                        </h3>
+
+                        <p>
+                            Conte o que aconteceu, o que já foi feito e qual é
+                            a sua principal preocupação.
+                        </p>
                     </article>
-                    <article class="process-item reveal"><span class="process-number">02</span>
-                        <div>
-                            <h3>Analisar</h3>
-                            <p>Os fatos são avaliados tecnicamente, considerando as possibilidades jurídicas.</p>
-                        </div><span class="line-arrow" aria-hidden="true">↗</span>
+
+
+                    <article class="process-card reveal">
+                        <span>02</span>
+
+                        <h3>
+                            Documentos são analisados
+                        </h3>
+
+                        <p>
+                            As informações e documentos disponíveis ajudam a
+                            identificar os pontos jurídicos relevantes.
+                        </p>
                     </article>
-                    <article class="process-item reveal"><span class="process-number">03</span>
-                        <div>
-                            <h3>Orientar</h3>
-                            <p>Você recebe uma orientação clara sobre os próximos caminhos possíveis.</p>
-                        </div><span class="line-arrow" aria-hidden="true">↗</span>
+
+
+                    <article class="process-card reveal">
+                        <span>03</span>
+
+                        <h3>
+                            Caminhos são avaliados
+                        </h3>
+
+                        <p>
+                            São considerados os meios administrativos ou judiciais
+                            juridicamente possíveis para a situação.
+                        </p>
                     </article>
+
+
+                    <article class="process-card reveal">
+                        <span>04</span>
+
+                        <h3>
+                            Você entende os próximos passos
+                        </h3>
+
+                        <p>
+                            A orientação busca apresentar o cenário de forma objetiva,
+                            com transparência sobre possibilidades e limites.
+                        </p>
+                    </article>
+
                 </div>
+
             </div>
+
         </section>
 
-        <section class="practice section-light" id="atuacao" aria-labelledby="practice-title">
+
+        <!-- =========================================================
+         ATUAÇÃO
+    ========================================================== -->
+
+        <section class="section section-navy" id="atuacao">
+
+            <div class="section-line" aria-hidden="true"></div>
+
             <div class="container">
-                <div class="section-intro split-intro practice-heading">
-                    <div>
-                        <p class="eyebrow">Áreas de atuação</p>
-                        <h2 id="practice-title">Atuação jurídica<br><em>com visão estratégica.</em></h2>
-                    </div>
-                    <p>Atuação para pessoas e empresas, com atendimento presencial e online.</p>
+
+                <div class="section-heading section-heading-light reveal">
+
+                    <p class="eyebrow">
+                        Áreas de atuação
+                    </p>
+
+                    <h2>
+                        Atuação jurídica para diferentes momentos da vida.
+                    </h2>
+
+                    <p>
+                        Conheça as principais áreas atendidas pela
+                        Advocacia Alef Borges.
+                    </p>
+
                 </div>
-                <div class="practice-layout">
-                    <article class="practice-feature reveal"><span class="practice-number">01</span>
-                        <p class="practice-label">Principal atuação</p>
+
+
+                <div class="areas-grid">
+
+                    <article class="area-card area-card-featured reveal">
+                        <span class="area-number">01</span>
+
                         <h3>Direito Bancário</h3>
-                        <p>Fraudes bancárias, golpes envolvendo Pix, empréstimos consignados, contratos, cobranças e
-                            conflitos com instituições financeiras.</p><a class="card-link"
-                            href="https://wa.me/558598199293" target="_blank" rel="noopener noreferrer">Saiba mais <span
-                                class="arrow-icon" aria-hidden="true">→</span></a>
+
+                        <p>
+                            Questões relacionadas a contratos bancários, cobranças,
+                            fraudes, Pix, empréstimos, consignados e outras relações
+                            com instituições financeiras.
+                        </p>
+
+                        <a class="card-link" href="#contato">
+                            Falar sobre o caso
+                            <span>→</span>
+                        </a>
                     </article>
-                    <div class="practice-secondary">
-                        <article class="practice-item reveal"><span class="practice-number">02</span>
-                            <h3>Direito da Saúde</h3>
-                            <p>Planos de saúde, negativas de cobertura, tratamentos e direitos dos pacientes.</p><a
-                                class="card-link" href="https://wa.me/558598199293" target="_blank"
-                                rel="noopener noreferrer">Saiba mais <span class="arrow-icon"
-                                    aria-hidden="true">→</span></a>
-                        </article>
-                        <article class="practice-item reveal"><span class="practice-number">03</span>
-                            <h3>Direito do Consumidor</h3>
-                            <p>Defesa diante de abusos, cobranças indevidas e falhas na prestação de serviços.</p><a
-                                class="card-link" href="https://wa.me/558598199293" target="_blank"
-                                rel="noopener noreferrer">Saiba mais <span class="arrow-icon"
-                                    aria-hidden="true">→</span></a>
-                        </article>
-                        <article class="practice-item compact reveal"><span class="practice-number">04</span>
-                            <h3>Direito Previdenciário</h3>
-                            <p>Aposentadorias, BPC/LOAS, auxílio-acidente e demais benefícios.</p>
-                        </article>
-                        <article class="practice-item compact reveal"><span class="practice-number">05</span>
-                            <h3>Direito Trabalhista</h3>
-                            <p>Questões relacionadas às relações de trabalho e direitos do trabalhador.</p>
-                        </article>
-                        <article class="practice-item wide compact reveal"><span class="practice-number">06</span>
-                            <h3>Família, Sucessões e Imobiliário</h3>
-                            <p>Inventários, partilhas, questões familiares, sucessões e regularização imobiliária.</p>
-                        </article>
+
+
+                    <article class="area-card reveal">
+                        <span class="area-number">02</span>
+
+                        <h3>Direito da Saúde</h3>
+
+                        <p>
+                            Demandas envolvendo planos de saúde, negativas de cobertura,
+                            procedimentos, tratamentos e questões relacionadas
+                            à assistência à saúde.
+                        </p>
+                    </article>
+
+
+                    <article class="area-card reveal">
+                        <span class="area-number">03</span>
+
+                        <h3>Direito do Consumidor</h3>
+
+                        <p>
+                            Orientação em relações de consumo, cobranças, contratos,
+                            falhas na prestação de serviços e outras situações
+                            de conflito com fornecedores.
+                        </p>
+                    </article>
+
+
+                    <article class="area-card reveal">
+                        <span class="area-number">04</span>
+
+                        <h3>Direito Previdenciário</h3>
+
+                        <p>
+                            Questões relacionadas a benefícios previdenciários
+                            e assistenciais, incluindo aposentadoria e BPC/LOAS.
+                        </p>
+                    </article>
+
+
+                    <article class="area-card reveal">
+                        <span class="area-number">05</span>
+
+                        <h3>Direito Trabalhista</h3>
+
+                        <p>
+                            Orientação e atuação em questões decorrentes
+                            das relações de trabalho.
+                        </p>
+                    </article>
+
+
+                    <article class="area-card reveal">
+                        <span class="area-number">06</span>
+
+                        <h3>Direito Imobiliário</h3>
+
+                        <p>
+                            Questões jurídicas relacionadas a imóveis,
+                            contratos e relações imobiliárias.
+                        </p>
+                    </article>
+
+
+                    <article class="area-card reveal">
+                        <span class="area-number">07</span>
+
+                        <h3>Família e Sucessões</h3>
+
+                        <p>
+                            Demandas familiares e sucessórias conduzidas com
+                            atenção às circunstâncias específicas de cada caso.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================================
+         O ADVOGADO
+    ========================================================== -->
+
+        <section class="section section-light" id="sobre">
+
+            <div class="section-line" aria-hidden="true"></div>
+
+            <div class="container about-grid reveal">
+
+                <div class="about-media">
+
+                    <div class="about-image-frame">
+
+                        <img src="img/alef-02.png" alt="Alef Borges — Advocacia" loading="lazy">
+
                     </div>
+
                 </div>
-            </div>
-        </section>
 
-        <section class="about section-paper" id="sobre" aria-labelledby="about-title">
-            <div class="container about-grid">
-                <figure class="about-visual reveal"><img src="img/alef-02.png" alt="Dr. Alef Borges" loading="lazy">
-                    <figcaption><strong>AB</strong><span>Alef Borges<br><small>Advocacia</small></span></figcaption>
-                </figure>
-                <div class="about-content reveal">
-                    <p class="eyebrow">O advogado</p>
-                    <h2 id="about-title">Técnica, estratégia<br><em>e compromisso.</em></h2>
-                    <p>A Advocacia Alef Borges atua de forma personalizada, buscando compreender cada situação em
-                        profundidade antes de definir a estratégia jurídica adequada.</p>
-                    <p>Com especialização em Direito do Consumidor e Direito Bancário, o escritório também atua em
-                        diferentes áreas do Direito para oferecer orientação jurídica de acordo com as necessidades de
-                        cada cliente.</p>
-                    <div class="about-facts">
-                        <div><strong>Atendimento</strong><span>Presencial e online</span></div>
-                        <div><strong>Localização</strong><span>Fortaleza — Ceará</span></div>
-                        <div><strong>Especialização</strong><span>Direito do Consumidor e Direito Bancário</span></div>
-                    </div><a class="text-link" href="https://wa.me/558598199293" target="_blank"
-                        rel="noopener noreferrer">Fale com o escritório <span class="arrow-icon"
-                            aria-hidden="true">→</span></a>
+
+                <div class="about-content">
+
+                    <p class="eyebrow">
+                        O Advogado
+                    </p>
+
+                    <h2>
+                        Uma advocacia orientada por técnica,
+                        estratégia e proximidade.
+                    </h2>
+
+                    <p>
+                        A Advocacia Alef Borges atua com foco em compreender
+                        cada situação de forma individualizada e construir
+                        uma orientação jurídica coerente com os fatos e
+                        documentos apresentados.
+                    </p>
+
+                    <p>
+                        A proposta é unir conhecimento técnico, comunicação
+                        clara e acompanhamento próximo, para que o cliente
+                        compreenda o cenário jurídico antes de tomar
+                        decisões importantes.
+                    </p>
+
+                    <div class="about-signature">
+
+                        <span>
+                            Advocacia Alef Borges
+                        </span>
+
+                        <small>
+                            Fortaleza · Ceará
+                        </small>
+
+                    </div>
+
                 </div>
+
             </div>
+
         </section>
 
-        <section class="statement section-navy" aria-label="Posicionamento institucional">
-            <div class="container statement-inner"><span class="gold-line"></span>
-                <p class="eyebrow eyebrow-light">Advocacia Alef Borges</p>
-                <blockquote>“Antes de tomar uma decisão,<br><em>entenda as possibilidades.</em>”</blockquote>
+
+        <!-- =========================================================
+         FRASE
+    ========================================================== -->
+
+        <section class="statement section-dark">
+
+            <div class="statement-line" aria-hidden="true"></div>
+
+            <div class="container statement-inner reveal">
+
+                <p class="eyebrow">
+                    Princípio de atuação
+                </p>
+
+                <blockquote>
+                    “Antes de buscar uma solução,
+                    é preciso compreender exatamente o problema.”
+                </blockquote>
+
             </div>
+
         </section>
 
-        <section class="articles section-light" id="conteudos" aria-labelledby="articles-title">
+
+        <!-- =========================================================
+         CONTEÚDOS
+    ========================================================== -->
+
+        <section class="section section-paper" id="conteudos">
+
+            <div class="section-line" aria-hidden="true"></div>
+
             <div class="container">
-                <div class="section-intro split-intro">
+
+                <div class="section-heading split-heading reveal">
+
                     <div>
-                        <p class="eyebrow">Conteúdos</p>
-                        <h2 id="articles-title">Informação para<br><em>entender seus direitos.</em></h2>
+
+                        <p class="eyebrow">
+                            Conteúdos
+                        </p>
+
+                        <h2>
+                            Informação para decisões mais conscientes.
+                        </h2>
+
                     </div>
-                    <p>Conteúdos educativos para orientar decisões com mais clareza.</p>
+
+                    <p>
+                        Conteúdos jurídicos objetivos sobre situações que fazem
+                        parte da rotina de consumidores, famílias e empresas.
+                    </p>
+
                 </div>
-                <div class="article-list">
-                    <article class="article-row reveal"><span class="article-number">01</span>
-                        <div>
-                            <p class="article-category">Direito Bancário</p>
-                            <h3>O que fazer em caso de golpe ou fraude bancária?</h3>
-                            <p>Uma visão inicial sobre os caminhos possíveis diante de uma fraude.</p>
-                        </div><a class="article-category" href="conteudos/golpe-fraude-bancaria.html">
-                            Ler conteúdo →
+
+
+                <div class="articles-grid">
+
+                    <article class="article-card reveal">
+
+                        <span class="article-category">
+                            Direito Bancário
+                        </span>
+
+                        <h3>
+                            O que fazer em caso de golpe ou fraude bancária?
+                        </h3>
+
+                        <p>
+                            Veja quais informações preservar e quais medidas
+                            podem ser avaliadas diante de uma fraude.
+                        </p>
+
+                        <a class="text-link" href="conteudos/golpe-fraude-bancaria.html">
+                            Ler conteúdo
+                            <span aria-hidden="true">→</span>
                         </a>
+
                     </article>
-                    <article class="article-row reveal"><span class="article-number">02</span>
-                        <div>
-                            <p class="article-category">Direito do Consumidor</p>
-                            <h3>Quais são os seus direitos diante de uma cobrança indevida?</h3>
-                            <p>Entenda como organizar informações e documentos sobre o caso.</p>
-                        </div><a class="article-category" href="conteudos/cobranca-indevida.html">
-                            Ler conteúdo →
+
+
+                    <article class="article-card reveal">
+
+                        <span class="article-category">
+                            Direito do Consumidor
+                        </span>
+
+                        <h3>
+                            Quais são os seus direitos diante de uma cobrança indevida?
+                        </h3>
+
+                        <p>
+                            Entenda como identificar a cobrança, organizar
+                            documentos e avaliar os próximos passos.
+                        </p>
+
+                        <a class="text-link" href="conteudos/cobranca-indevida.html">
+                            Ler conteúdo
+                            <span aria-hidden="true">→</span>
                         </a>
+
                     </article>
-                    <article class="article-row reveal"><span class="article-number">03</span>
-                        <div>
-                            <p class="article-category">Direito da Saúde</p>
-                            <h3>Plano de saúde negou um procedimento. O que fazer?</h3>
-                            <p>Informações iniciais para compreender a situação e buscar orientação.</p>
-                        </div><a class="article-category" href="conteudos/plano-saude-negou-procedimento.html">
-                            Ler conteúdo →
+
+
+                    <article class="article-card reveal">
+
+                        <span class="article-category">
+                            Direito da Saúde
+                        </span>
+
+                        <h3>
+                            Plano de saúde negou um procedimento. O que fazer?
+                        </h3>
+
+                        <p>
+                            Saiba como registrar a negativa e organizar
+                            a documentação para análise do caso.
+                        </p>
+
+                        <a class="text-link" href="conteudos/plano-saude-negou-procedimento.html">
+                            Ler conteúdo
+                            <span aria-hidden="true">→</span>
                         </a>
+
                     </article>
+
                 </div>
+
             </div>
+
         </section>
 
-        <section class="contact section-navy" id="contato" aria-labelledby="contact-title">
-            <div class="container contact-grid">
-                <div class="contact-copy">
-                    <p class="eyebrow eyebrow-light">Atendimento jurídico</p>
-                    <h2 id="contact-title">Vamos compreender<br><em>o seu caso.</em></h2>
-                    <p>Entre em contato e apresente sua situação para uma análise inicial, presencial ou online.</p><a
-                        class="button button-gold" href="https://wa.me/558598199293" target="_blank"
-                        rel="noopener noreferrer">Falar pelo WhatsApp <span class="arrow-icon"
-                            aria-hidden="true">↗</span></a>
+
+        <!-- =========================================================
+         CONTATO
+    ========================================================== -->
+
+        <section class="section contact-section section-light" id="contato">
+
+            <div class="section-line" aria-hidden="true"></div>
+
+            <div class="container contact-grid reveal">
+
+                <div>
+
+                    <p class="eyebrow">
+                        Contato
+                    </p>
+
+                    <h2>
+                        Fale sobre o seu caso.
+                    </h2>
+
+                    <p>
+                        Apresente as informações iniciais e, quando possível,
+                        tenha em mãos os documentos relacionados à situação.
+                    </p>
+
                 </div>
-                <div class="contact-panel">
-                    <div><strong>Atendimento</strong><span>Presencial e online<br>Fortaleza — Ceará</span></div>
-                    <div><strong>Contato</strong><a href="https://wa.me/558598199293" target="_blank"
-                            rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24">
-                                <path d="M20 11.8a8 8 0 0 1-11.8 7.1L4 20l1.2-4A8 8 0 1 1 20 11.8Z"></path>
-                                <path
-                                    d="M9 8.5c.2 2 1.5 4 3.5 5.2.7.4 1.5.7 2 .2l.7-.8c.2-.2.1-.5-.1-.6l-1.5-.7c-.2-.1-.4-.1-.6.1l-.5.6c-1-.5-1.7-1.2-2.2-2.1l.5-.5c.2-.2.2-.4.1-.6l-.7-1.5c-.1-.2-.4-.3-.6-.1l-.7.8c-.2.2-.1.6.1 1Z">
-                                </path>
-                            </svg>WhatsApp</a>
-                        <a href="https://www.instagram.com/alefborges.adv/" target="_blank"
-                            rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24">
-                                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-                                <circle cx="12" cy="12" r="4"></circle>
-                            </svg>@alefborges.adv</a><span class="email-todo">E-mail: inserir endereço oficial</span>
-                    </div>
+
+
+                <div class="contact-card">
+
+                    <span class="contact-label">
+                        Atendimento
+                    </span>
+
+                    <strong>
+                        Presencial e online
+                    </strong>
+
+                    <span>
+                        Fortaleza — Ceará
+                    </span>
+
+
+                    <a class="button button-gold"
+                        href="https://wa.me/558598199293?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20o%20meu%20caso."
+                        target="_blank" rel="noopener noreferrer">
+                        Falar sobre meu caso
+                    </a>
+
+
+                    <a class="contact-instagram" href="https://www.instagram.com/alefborges.adv/" target="_blank"
+                        rel="noopener noreferrer">
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+
+                            <circle cx="12" cy="12" r="4"></circle>
+
+                            <circle cx="17.5" cy="6.5" r="1" class="fill"></circle>
+                        </svg>
+
+                        Instagram · @alefborges.adv
+
+                    </a>
+
                 </div>
+
             </div>
+
         </section>
+
     </main>
 
-    <footer class="footer">
+
+    <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
+    <footer class="site-footer">
+
         <div class="container footer-main">
-            <div class="footer-brand"><img src="img/logo.png" alt="Advocacia Alef Borges">
-                <p>Advocacia técnica, estratégica e personalizada.</p>
+
+            <div class="footer-brand">
+
+                <img class="footer-logo" src="img/logo.png" alt="Advocacia Alef Borges">
+
+                <p>
+                    Atuação jurídica técnica e personalizada.
+                </p>
+
             </div>
-            <div class="footer-column"><strong>Navegação</strong><a href="#inicio">Início</a><a
-                    href="#atuacao">Atuação</a><a href="#sobre">O advogado</a><a href="#conteudos">Conteúdos</a><a
-                    href="#contato">Contato</a></div>
-            <div class="footer-column"><strong>Contato</strong><a class="footer-contact-link footer-icon-only"
-                    href="https://wa.me/558598199293" target="_blank" rel="noopener noreferrer"
-                    aria-label="WhatsApp da Advocacia Alef Borges" title="WhatsApp"><svg aria-hidden="true"
-                        viewBox="0 0 24 24">
-                        <path d="M20 11.8a8 8 0 0 1-11.8 7.1L4 20l1.2-4A8 8 0 1 1 20 11.8Z"></path>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Navegação
+                </h3>
+
+                <a href="#inicio">Início</a>
+                <a href="#atuacao">Atuação</a>
+                <a href="#sobre">O Advogado</a>
+                <a href="#processo">Como Funciona</a>
+                <a href="#conteudos">Conteúdos</a>
+                <a href="#contato">Contato</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Atendimento
+                </h3>
+
+                <a href="https://wa.me/558598199293" target="_blank" rel="noopener noreferrer"
+                    class="footer-contact-link">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path
-                            d="M9 8.5c.2 2 1.5 4 3.5 5.2.7.4 1.5.7 2 .2l.7-.8c.2-.2.1-.5-.1-.6l-1.5-.7c-.2-.1-.4-.1-.6.1l-.5.6c-1-.5-1.7-1.2-2.2-2.1l.5-.5c.2-.2.2-.4.1-.6l-.7-1.5c-.1-.2-.4-.3-.6-.1l-.7.8c-.2.2-.1.6.1 1Z">
+                            d="M20.5 3.5A11.9 11.9 0 0 0 12.05 0C5.48 0 .14 5.34.14 11.91c0 2.1.55 4.15 1.6 5.96L.04 24l6.28-1.65a11.9 11.9 0 0 0 5.73 1.46h.01c6.57 0 11.91-5.34 11.91-11.91 0-3.18-1.24-6.17-3.47-8.4ZM12.06 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.73.98.99-3.64-.23-.37a9.9 9.9 0 1 1 8.38 4.62Zm5.43-7.42c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.51s1.08 2.91 1.23 3.11c.15.2 2.12 3.24 5.14 4.55.72.31 1.28.49 1.72.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z">
                         </path>
-                    </svg></a><a class="footer-contact-link footer-icon-only"
-                    href="https://www.instagram.com/alefborges.adv/" target="_blank" rel="noopener noreferrer"
-                    aria-label="Instagram da Advocacia Alef Borges" title="Instagram"><svg aria-hidden="true"
-                        viewBox="0 0 24 24">
+                    </svg>
+
+                    WhatsApp
+                </a>
+
+
+                <a href="https://www.instagram.com/alefborges.adv/" target="_blank" rel="noopener noreferrer"
+                    class="footer-contact-link">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
                         <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+
                         <circle cx="12" cy="12" r="4"></circle>
-                    </svg></a><!-- TODO: inserir o e-mail oficial no href quando definido --><span
-                    class="footer-contact-link footer-icon-only footer-email-placeholder" role="img"
-                    aria-label="E-mail do escritório" title="E-mail do escritório"><svg aria-hidden="true"
-                        viewBox="0 0 24 24">
-                        <rect x="3" y="5" width="18" height="14" rx="1"></rect>
-                        <path d="m4 7 8 6 8-6"></path>
-                    </svg></span></div>
+
+                        <circle cx="17.5" cy="6.5" r="1" class="fill"></circle>
+                    </svg>
+
+                    Instagram
+                </a>
+
+            </div>
+
         </div>
-        <div class="container footer-bottom"><span>© <span data-year>2026</span> Advocacia Alef Borges. Todos os
-                direitos reservados.</span><span>Fortaleza — CE</span></div>
+
+
+        <div class="container footer-bottom">
+
+            <span>
+                © <span data-year>2026</span>
+                Advocacia Alef Borges.
+                Todos os direitos reservados.
+            </span>
+            <p class="footer-credit">
+                Desenvolvido por
+                <a href="https://mantovanisys.com.br" target="_blank" rel="noopener noreferrer">
+                    Mantovani Sys
+                </a>
+            </p>
+            <span>
+                Fortaleza · Ceará
+            </span>
+
+        </div>
+
     </footer>
 
+
+    <!-- =========================================================
+       BOTÃO VOLTAR AO TOPO
+  ========================================================== -->
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Voltar ao topo">
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 19V5M6 11l6-6 6 6"></path>
+        </svg>
+
+    </button>
+
+
+    <!-- =========================================================
+       WHATSAPP FLUTUANTE
+  ========================================================== -->
+
     <a class="floating-whatsapp" href="https://wa.me/558598199293" target="_blank" rel="noopener noreferrer"
-        aria-label="Falar com a Advocacia Alef Borges pelo WhatsApp"><svg aria-hidden="true" viewBox="0 0 24 24">
-            <path d="M20 11.8a8 8 0 0 1-11.8 7.1L4 20l1.2-4A8 8 0 1 1 20 11.8Z"></path>
+        aria-label="Falar com a Advocacia Alef Borges pelo WhatsApp">
+
+        <span class="whatsapp-pulse"></span>
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
             <path
-                d="M9 8.5c.2 2 1.5 4 3.5 5.2.7.4 1.5.7 2 .2l.7-.8c.2-.2.1-.5-.1-.6l-1.5-.7c-.2-.1-.4-.1-.6.1l-.5.6c-1-.5-1.7-1.2-2.2-2.1l.5-.5c.2-.2.2-.4.1-.6l-.7-1.5c-.1-.2-.4-.3-.6-.1l-.7.8c-.2.2-.1.6.1 1Z">
+                d="M20.5 3.5A11.9 11.9 0 0 0 12.05 0C5.48 0 .14 5.34.14 11.91c0 2.1.55 4.15 1.6 5.96L.04 24l6.28-1.65a11.9 11.9 0 0 0 5.73 1.46h.01c6.57 0 11.91-5.34 11.91-11.91 0-3.18-1.24-6.17-3.47-8.4ZM12.06 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.73.98.99-3.64-.23-.37a9.9 9.9 0 1 1 8.38 4.62Zm5.43-7.42c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.51s1.08 2.91 1.23 3.11c.15.2 2.12 3.24 5.14 4.55.72.31 1.28.49 1.72.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z">
             </path>
-        </svg></a>
-    <script src="script.js"></script>
+        </svg>
+
+    </a>
+
+
+    <script src="script.js" defer></script>
+
 </body>
 
 </html>
