@@ -1620,6 +1620,7 @@ p {
     width: 31px;
     height: 31px;
     fill: currentColor;
+    transform: translateY(-5px);
 }
 
 .floating-whatsapp:hover {
@@ -1651,6 +1652,8 @@ p {
 }
 
 @media (max-width: 560px) {
+  
+    @media (max-width: 560px) {
     .floating-whatsapp {
         width: 56px;
         height: 56px;
@@ -1661,7 +1664,9 @@ p {
     .floating-whatsapp svg {
         width: 28px;
         height: 28px;
+        transform: translateY(-2px);
     }
+}
 }
  
 /* ============================================================
@@ -2407,15 +2412,16 @@ p {
 /* On mobile the theme control comes immediately before the hamburger,
    keeping the hamburger pinned to the far right edge. */
 @media (max-width: 800px) {
-    .header-inner {
-        justify-content: flex-start;
+  .header-inner {
+        padding-right: 2px;
     }
 
     .header-actions {
         margin-left: auto;
     }
 
-    .menu-toggle {
-        margin-left: 0;
+     .menu-toggle {
+        margin-left: auto;
+        order: 3;
     }
 }
