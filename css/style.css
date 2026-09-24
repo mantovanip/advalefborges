@@ -1664,7 +1664,7 @@ p {
     .floating-whatsapp svg {
         width: 28px;
         height: 28px;
-        transform: translateY(-2px);
+        transform: translateY(-5px);
     }
 }
 }
