@@ -1620,7 +1620,7 @@ p {
     width: 31px;
     height: 31px;
     fill: currentColor;
-    transform: translateY(-5px);
+    transform: translateY(-6px);
 }
 
 .floating-whatsapp:hover {
@@ -1664,7 +1664,7 @@ p {
     .floating-whatsapp svg {
         width: 28px;
         height: 28px;
-        transform: translateY(-5px);
+        transform: translateY(-6px);
     }
 }
 }
