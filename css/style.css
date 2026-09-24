@@ -443,7 +443,7 @@ p {
 
     border: 1px solid var(--gold);
 
-    background: #080d12;
+    background: var(--bg-deep);
 
     box-shadow:
         0 0 0 5px rgba(217, 184, 127, .04),
@@ -920,10 +920,7 @@ p {
 
     padding: 30px 27px;
 
-    background:
-        linear-gradient(145deg,
-            rgba(17, 25, 35, .94),
-            rgba(11, 16, 22, .96));
+    background: var(--bg-card);
 
     border: 1px solid var(--gold);
 
@@ -1000,10 +997,7 @@ p {
 
     padding: 30px;
 
-    background:
-        linear-gradient(145deg,
-            rgba(17, 25, 35, .82),
-            rgba(9, 14, 20, .92));
+    background: var(--bg-card);
 
     border: 1px solid var(--line-soft);
 
@@ -1232,10 +1226,7 @@ p {
 
     padding: 34px;
 
-    background:
-        linear-gradient(145deg,
-            rgba(17, 25, 35, .92),
-            rgba(9, 14, 20, .98));
+    background: var(--bg-card);
 
     border: 1px solid var(--line-soft);
 
@@ -1316,10 +1307,7 @@ p {
 
     padding: 42px;
 
-    background:
-        linear-gradient(145deg,
-            rgba(17, 25, 35, .95),
-            rgba(8, 13, 18, .98));
+    background: var(--bg-card);
 
     border: 1px solid var(--gold);
 
@@ -1396,7 +1384,7 @@ p {
 .site-footer {
     width: 100%;
     position: relative;
-    background: #070b10;
+    background: var(--bg-deep);
     color: var(--text);
     border-top: 1px solid var(--line);
 }
@@ -1431,7 +1419,7 @@ p {
     display: block;
     border-radius: 50%;
     border: 1px solid var(--gold);
-    background: #080d12;
+    background: var(--bg-deep);
     margin-bottom: 22px;
 }
 
@@ -1860,7 +1848,17 @@ p {
 
     .menu-toggle {
         display: block;
+        margin-left: 0;
+        order: 3;
+        flex: 0 0 auto;
+    }
 
+    .logo {
+        order: 1;
+    }
+
+    .header-actions {
+        order: 2;
         margin-left: auto;
     }
 
@@ -2068,8 +2066,8 @@ p {
     }
 
     .floating-whatsapp {
-        right: 17px;
-        bottom: 17px;
+        right: 16px;
+        bottom: 16px;
 
         width: 58px;
         height: 58px;
@@ -2347,5 +2345,77 @@ p {
     .article-page .article-cta,
     .article-page .article-sidebar {
         padding: 24px;
+    }
+}
+
+/* ============================================================
+   THEME CONSISTENCY + MOBILE HEADER FIXES
+============================================================ */
+
+/* Cards use the active theme instead of a permanently dark gradient. */
+[data-theme="light"] .process-card,
+[data-theme="light"] .area-card,
+[data-theme="light"] .article-card,
+[data-theme="light"] .contact-card {
+    background: var(--bg-card);
+    color: var(--text);
+}
+
+[data-theme="light"] .process-card p,
+[data-theme="light"] .area-card p,
+[data-theme="light"] .article-card p,
+[data-theme="light"] .contact-card > span:not(.contact-label) {
+    color: var(--muted);
+}
+
+[data-theme="light"] .process-card,
+[data-theme="light"] .area-card,
+[data-theme="light"] .article-card,
+[data-theme="light"] .contact-card {
+    box-shadow: 0 12px 35px rgba(40, 35, 25, .06);
+}
+
+[data-theme="light"] .article-page .article-hero {
+    background:
+        linear-gradient(90deg,
+            rgba(244, 240, 232, .97) 0%,
+            rgba(244, 240, 232, .88) 55%,
+            rgba(244, 240, 232, .76) 100%),
+        url("../img/escritorio.jpg") center / cover no-repeat;
+}
+
+[data-theme="light"] .article-page .article-hero h1 {
+    color: var(--text);
+}
+
+[data-theme="light"] .article-page .article-lead {
+    color: var(--muted);
+}
+
+[data-theme="light"] .floating-whatsapp {
+    box-shadow:
+        0 10px 28px rgba(35, 30, 20, .16),
+        0 0 0 0 rgba(37, 211, 102, .35);
+}
+
+/* The floating action always stays above the back-to-top control. */
+.floating-whatsapp {
+    z-index: 1200;
+    cursor: pointer;
+}
+
+/* On mobile the theme control comes immediately before the hamburger,
+   keeping the hamburger pinned to the far right edge. */
+@media (max-width: 800px) {
+    .header-inner {
+        justify-content: flex-start;
+    }
+
+    .header-actions {
+        margin-left: auto;
+    }
+
+    .menu-toggle {
+        margin-left: 0;
     }
 }
