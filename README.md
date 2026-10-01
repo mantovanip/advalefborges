@@ -1,32 +1,59 @@
 # Advogado Alef Borges
 
-Site institucional desenvolvido pela **Mantovani SYS** para Alef Borges.
+> Site institucional profissional desenvolvido pela **Mantovani SYS** para Alef Borges.
 
-## Projeto
+## Visão geral
 
-Página profissional para apresentação do escritório/profissional, informações de atuação e canais de contato.
+Projeto web criado para apresentar o profissional, suas áreas de atuação, informações institucionais e canais de contato em uma experiência responsiva.
+
+## Recursos
+
+- Página institucional
+- Apresentação profissional
+- Áreas de atuação jurídica
+- Conteúdo informativo
+- Seções de credibilidade
+- Canais de contato
+- Chamadas para atendimento
+- Navegação responsiva
+- SEO e metadados
+- Estrutura para compartilhamento social
+- Experiência adaptada para desktop e mobile
+
+## Tecnologias
+
+- HTML5
+- CSS3
+- JavaScript
+- Google Fonts
+- Metadados SEO
+- Layout responsivo
 
 ## Publicação
 
-Padrão Mantovani SYS para sites institucionais estáticos:
-
-```
+```text
+Código
+  ↓
 GitHub
   ↓
-GitHub Actions
+Deploy
   ↓
-GitHub Pages
+Site publicado
 ```
 
-## Desenvolvimento
+## Autoria
 
-Consulte os arquivos do projeto para a stack e os comandos disponíveis.
+**Desenvolvimento, arquitetura visual e implementação**
 
-## Observação
+### Paulo Mantovani — Mantovani SYS
 
-Informações profissionais, endereço, contatos, áreas de atuação e textos jurídicos devem ser confirmados e mantidos atualizados antes da publicação definitiva.
+GitHub: https://github.com/mantovanip  
+Site: https://mantovanisys.com.br
+
+## Status
+
+Projeto concluído para apresentação e publicação, sujeito a atualizações de conteúdo conforme necessidade do cliente.
 
 ---
 
-**Mantovani SYS**  
-https://mantovanisys.com.br
+**Mantovani SYS · Desenvolvimento Web**
